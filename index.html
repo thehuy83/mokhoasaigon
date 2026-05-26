@@ -102,11 +102,11 @@ fbq('track', 'PageView');
   "telephone":"+84932654809",
   "priceRange":"$$",
   "image":"https://mokhoasaigon.com/og-image.jpg",
-  "address":{"@type":"PostalAddress","addressLocality":"Thành phố Hồ Chí Minh","addressRegion":"TP.HCM","addressCountry":"VN"},
-  "geo":{"@type":"GeoCoordinates","latitude":"10.7769","longitude":"106.7009"},
+  "address":{"@type":"PostalAddress","streetAddress":"153/89 Điện Biên Phủ","addressLocality":"Quận Bình Thạnh","addressRegion":"TP. Hồ Chí Minh","postalCode":"700000","addressCountry":"VN"},
+  "geo":{"@type":"GeoCoordinates","latitude":"10.8026","longitude":"106.6983"},
   "openingHoursSpecification":{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],"opens":"00:00","closes":"23:59"},
   "aggregateRating":{"@type":"AggregateRating","ratingValue":"4.9","reviewCount":"487","bestRating":"5"},
-  "hasMap":"https://maps.google.com/?q=Mo+Khoa+Sai+Gon+TPHCM",
+  "hasMap":"https://maps.app.goo.gl/6r3Qo6SKgsrM6ndy8",
   "sameAs":["https://zalo.me/0908679343","https://zalo.me/0932654809","https://www.facebook.com/mokhoasaigon"],
   "areaServed":["Quận 1","Quận 3","Quận 4","Quận 5","Quận 6","Quận 7","Quận 8","Quận 10","Quận 11","Quận 12","Bình Thạnh","Gò Vấp","Phú Nhuận","Tân Bình","Tân Phú","Bình Tân","Thủ Đức","Bình Chánh","Nhà Bè","Hóc Môn","Củ Chi","Cần Giờ"],
   "knowsAbout":["Mở khóa xe máy","Làm chìa xe","Smartkey","Remote cửa cuốn","Mở két sắt","Sửa khóa cửa","Mở khóa ô tô"]
@@ -387,19 +387,56 @@ nav a:hover { color: var(--gold); background: rgba(244,180,0,0.12); }
 .tracuu-placeholder .big-icon { font-size: 44px; margin-bottom: 10px; }
 .tracuu-placeholder p { font-size: 14px; margin-bottom: 6px; }
 
-/* ===== CỬA HÀNG ===== */
-.shop-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
-.shop-card { background: var(--white); border-radius: var(--radius); overflow: hidden; box-shadow: var(--shadow-sm); border: 1px solid var(--gray-200); transition: all .3s; }
-.shop-card:hover { transform: translateY(-5px); box-shadow: var(--shadow-md); }
-.shop-card-head { background: linear-gradient(135deg, var(--text), #2D2D4E); padding: 24px; display: flex; align-items: center; gap: 16px; }
-.shop-icon-wrap { width: 52px; height: 52px; background: rgba(244,180,0,.15); border-radius: 14px; display: flex; align-items: center; justify-content: center; font-size: 26px; flex-shrink: 0; }
-.shop-card-head h3 { font-family: var(--font-display); font-size: 17px; font-weight: 700; color: var(--white); margin-bottom: 3px; }
-.shop-card-head p { font-size: 12px; color: rgba(255,255,255,.6); }
-.shop-card-body { padding: 20px; }
-.shop-item-list { display: flex; flex-direction: column; gap: 9px; }
-.shop-item { display: flex; align-items: center; gap: 10px; padding: 9px 13px; background: var(--gray-50); border-radius: 10px; font-size: 14px; color: var(--text-light); border: 1px solid var(--gray-200); }
-.shop-item span:first-child { font-size: 17px; flex-shrink: 0; }
-.shop-cta { margin-top: 14px; padding: 13px 16px; background: var(--gold-light); border-radius: 10px; font-size: 13px; color: #7A5500; font-weight: 600; text-align: center; }
+/* ===== ĐÁNH GIÁ ===== */
+.reviews-overview { display:flex; align-items:center; gap:24px; background:var(--white); border-radius:var(--radius); padding:22px 28px; box-shadow:var(--shadow-sm); border:1px solid var(--gray-200); margin-bottom:36px; flex-wrap:wrap; }
+.reviews-score-big { text-align:center; flex-shrink:0; }
+.score-number { font-family:var(--font-display); font-size:56px; font-weight:800; color:var(--gold-deep); line-height:1; }
+.score-stars { color:var(--gold); font-size:20px; letter-spacing:2px; margin:4px 0; }
+.score-count { font-size:12px; color:var(--text-light); }
+.reviews-divider { width:1px; height:64px; background:var(--gray-200); flex-shrink:0; }
+.rating-bars { flex:1; display:flex; flex-direction:column; gap:7px; min-width:200px; }
+.bar-row { display:flex; align-items:center; gap:8px; font-size:12px; }
+.bar-label { width:30px; text-align:right; color:var(--text-light); font-weight:600; }
+.bar-track { flex:1; height:6px; background:var(--gray-200); border-radius:3px; overflow:hidden; }
+.bar-fill { height:100%; background:var(--gold); border-radius:3px; }
+.bar-count { width:28px; font-weight:600; color:var(--text-light); font-size:11px; }
+.reviews-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(300px,1fr)); gap:20px; }
+.review-card { background:var(--white); border-radius:var(--radius); padding:22px; box-shadow:var(--shadow-sm); border:1px solid var(--gray-100); transition:all .3s; }
+.review-card:hover { transform:translateY(-4px); box-shadow:var(--shadow-md); }
+.review-top { display:flex; align-items:center; gap:12px; margin-bottom:12px; }
+.review-avatar { width:44px; height:44px; border-radius:50%; background:linear-gradient(135deg,var(--gold),var(--gold-deep)); display:flex; align-items:center; justify-content:center; font-size:18px; font-weight:800; color:var(--text); flex-shrink:0; font-family:var(--font-display); }
+.review-name { font-weight:700; font-size:14px; color:var(--text); }
+.review-meta { font-size:11px; color:var(--text-light); }
+.review-stars { font-size:14px; color:var(--gold); letter-spacing:1px; margin-bottom:8px; }
+.review-service { display:inline-block; background:var(--gold-bg); color:#7A5500; padding:3px 10px; border-radius:50px; font-size:11px; font-weight:600; margin-bottom:9px; }
+.review-text { font-size:13.5px; color:var(--text-light); line-height:1.7; }
+.review-verified { display:flex; align-items:center; gap:5px; font-size:11px; color:var(--green); margin-top:10px; font-weight:600; }
+
+/* ===== FAQ ===== */
+.faq-grid { display:flex; flex-direction:column; gap:10px; max-width:800px; margin:0 auto; }
+.faq-item { background:var(--white); border-radius:var(--radius-sm); border:1px solid var(--gray-200); overflow:hidden; transition:all .3s; }
+.faq-item.open { border-color:rgba(244,180,0,.5); box-shadow:var(--shadow-sm); }
+.faq-q { display:flex; align-items:center; justify-content:space-between; padding:16px 20px; cursor:pointer; font-weight:600; font-size:15px; color:var(--text); gap:14px; user-select:none; }
+.faq-q:hover { color:var(--gold-deep); }
+.faq-icon { width:24px; height:24px; flex-shrink:0; background:var(--gold-light); border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:18px; font-weight:700; color:var(--gold-deep); transition:transform .3s, background .3s; }
+.faq-item.open .faq-icon { transform:rotate(45deg); background:var(--gold); }
+.faq-a { display:none; padding:0 20px 16px; font-size:14px; color:var(--text-light); line-height:1.8; }
+.faq-item.open .faq-a { display:block; }
+
+/* ===== BLOG ===== */
+.blog-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(300px,1fr)); gap:22px; }
+.blog-card { background:var(--white); border-radius:var(--radius); overflow:hidden; box-shadow:var(--shadow-sm); border:1px solid var(--gray-100); transition:all .3s; cursor:pointer; }
+.blog-card:hover { transform:translateY(-6px); box-shadow:var(--shadow-lg); }
+.blog-thumb { height:180px; background:linear-gradient(135deg,var(--gold-bg),#FFF0B3); display:flex; align-items:center; justify-content:center; font-size:56px; position:relative; }
+.blog-cat { position:absolute; top:14px; left:14px; background:var(--gold); color:var(--text); padding:4px 10px; border-radius:50px; font-size:11px; font-weight:700; text-transform:uppercase; letter-spacing:.5px; }
+.blog-body { padding:20px; }
+.blog-title { font-family:var(--font-display); font-size:15px; font-weight:700; color:var(--text); margin-bottom:8px; line-height:1.4; }
+.blog-excerpt { font-size:13px; color:var(--text-light); line-height:1.6; margin-bottom:14px; }
+.blog-meta { display:flex; align-items:center; justify-content:space-between; font-size:12px; color:var(--gray-400); }
+.blog-readmore { color:var(--gold-deep); font-weight:600; text-decoration:none; }
+.blog-tab { background:var(--gray-100); border:1px solid var(--gray-200); color:var(--gray-700); padding:7px 16px; border-radius:50px; font-size:13px; font-weight:600; cursor:pointer; transition:all .2s; font-family:var(--font-body); }
+.blog-tab:hover, .blog-tab.active { background:var(--gold); border-color:var(--gold-deep); color:var(--text); }
+.blog-card.hidden { display:none; }
 
 /* ===== QUY TRÌNH ===== */
 .process-grid { display: grid; grid-template-columns: repeat(4,1fr); gap: 0; position: relative; }
@@ -410,112 +447,6 @@ nav a:hover { color: var(--gold); background: rgba(244,180,0,0.12); }
 .process-title { font-family:var(--font-display); font-size:15px; font-weight:700; color:var(--text); margin-bottom:8px; }
 .process-desc { font-size:13px; color:var(--text-light); line-height:1.6; }
 .process-badge { display:inline-block; background:var(--gold-light); color:#7A5500; padding:3px 10px; border-radius:50px; font-size:11px; font-weight:700; margin-top:8px; }
-
-/* ===== FORM ĐẶT LỊCH ===== */
-.booking-wrap { display:grid; grid-template-columns:1fr 1fr; gap:48px; align-items:start; }
-.booking-info { padding-right:8px; }
-.booking-info-item { display:flex; align-items:flex-start; gap:14px; margin-bottom:22px; }
-.booking-info-icon { width:44px; height:44px; background:linear-gradient(135deg,var(--gold),var(--gold-deep)); border-radius:12px; display:flex; align-items:center; justify-content:center; font-size:20px; flex-shrink:0; box-shadow:var(--shadow-gold); }
-.booking-info-item strong { display:block; font-size:15px; font-weight:700; color:var(--white); margin-bottom:3px; }
-.booking-info-item span { font-size:13px; color:rgba(255,255,255,.65); }
-.booking-form-card { background:var(--white); border-radius:20px; padding:32px; box-shadow:var(--shadow-lg); }
-.form-title { font-family:var(--font-display); font-size:20px; font-weight:800; color:var(--text); margin-bottom:6px; }
-.form-subtitle { font-size:13px; color:var(--text-light); margin-bottom:24px; }
-.form-row { display:grid; grid-template-columns:1fr 1fr; gap:12px; margin-bottom:12px; }
-.form-row.full { grid-template-columns:1fr; }
-.form-group { display:flex; flex-direction:column; gap:6px; }
-.form-group label { font-size:13px; font-weight:600; color:var(--gray-700); }
-.form-group input, .form-group select, .form-group textarea {
-  padding:11px 14px; border:1.5px solid var(--gray-200); border-radius:10px;
-  font-size:14px; font-family:var(--font-body); color:var(--text); background:var(--white);
-  outline:none; transition:border-color .2s, box-shadow .2s;
-}
-.form-group input:focus, .form-group select:focus, .form-group textarea:focus {
-  border-color:var(--gold); box-shadow:0 0 0 3px rgba(244,180,0,.12);
-}
-.form-group textarea { resize:vertical; min-height:80px; }
-.form-submit { width:100%; padding:14px; border-radius:12px; background:linear-gradient(135deg,var(--gold),var(--gold-deep)); color:var(--text); font-weight:700; font-size:16px; border:none; cursor:pointer; font-family:var(--font-body); transition:all .25s; margin-top:8px; }
-.form-submit:hover { transform:translateY(-2px); box-shadow:var(--shadow-gold); }
-.form-note { font-size:12px; color:var(--text-light); text-align:center; margin-top:10px; }
-.form-success { display:none; text-align:center; padding:24px; }
-.form-success .success-icon { font-size:48px; margin-bottom:12px; }
-.form-success h3 { font-family:var(--font-display); font-size:20px; font-weight:700; color:var(--text); margin-bottom:8px; }
-.form-success p { font-size:14px; color:var(--text-light); }
-
-/* ===== GALLERY & VIDEO ===== */
-.media-tabs { display:flex; gap:0; background:var(--gray-100); border-radius:12px; padding:4px; margin-bottom:28px; width:fit-content; }
-.media-tab { padding:10px 28px; border-radius:10px; font-size:14px; font-weight:600; cursor:pointer; background:none; border:none; color:var(--text-light); transition:all .25s; font-family:var(--font-body); }
-.media-tab.active { background:var(--white); color:var(--text); box-shadow:var(--shadow-sm); }
-.media-panel { display:none; }
-.media-panel.active { display:block; }
-.gallery-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:14px; }
-.gallery-item { border-radius:16px; overflow:hidden; background:linear-gradient(135deg,#0d0d1a,#1A1A2E); aspect-ratio:4/3; display:flex; align-items:center; justify-content:center; position:relative; cursor:pointer; transition:transform .35s cubic-bezier(.22,.68,0,1.2), box-shadow .35s; box-shadow:0 4px 24px rgba(0,0,0,0.3); border:1px solid rgba(255,255,255,0.06); }
-.gallery-item:hover { transform:scale(1.04) translateY(-4px); box-shadow:0 16px 48px rgba(0,0,0,0.55); border-color:rgba(244,180,0,0.35); }
-.gallery-placeholder { display:flex; flex-direction:column; align-items:center; gap:8px; color:rgba(255,255,255,.5); }
-.gallery-placeholder .ph-icon { font-size:36px; }
-.gallery-placeholder span { font-size:12px; font-weight:600; letter-spacing:.5px; text-align:center; padding:0 12px; }
-.gallery-item img { width:100%; height:100%; object-fit:cover; position:absolute; inset:0; }
-.gallery-badge { position:absolute; top:10px; right:10px; background:var(--gold); color:var(--text); padding:3px 10px; border-radius:50px; font-size:11px; font-weight:700; }
-.video-grid { display:grid; grid-template-columns:repeat(2,1fr); gap:20px; }
-.video-item { border-radius:16px; overflow:hidden; background:#0F0F1A; aspect-ratio:16/9; position:relative; }
-.video-item iframe { width:100%; height:100%; border:none; }
-.video-placeholder { width:100%; height:100%; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:12px; cursor:pointer; }
-.video-placeholder .play-btn { width:64px; height:64px; background:var(--gold); border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:24px; transition:transform .25s; box-shadow:var(--shadow-gold); }
-.video-placeholder:hover .play-btn { transform:scale(1.1); }
-.video-placeholder p { font-size:14px; font-weight:600; color:rgba(255,255,255,.8); text-align:center; padding:0 16px; }
-.media-update-notice { display:flex; align-items:center; gap:12px; padding:14px 20px; background:rgba(244,180,0,.08); border:1px dashed rgba(244,180,0,.4); border-radius:12px; margin-top:20px; font-size:13px; color:rgba(255,255,255,.7); }
-
-/* ===== ĐÁNH GIÁ ===== */
-.reviews-overview { display: flex; align-items: center; gap: 24px; background: var(--white); border-radius: var(--radius); padding: 22px 28px; box-shadow: var(--shadow-sm); border: 1px solid var(--gray-200); margin-bottom: 36px; flex-wrap: wrap; }
-.reviews-score-big { text-align: center; flex-shrink: 0; }
-.score-number { font-family: var(--font-display); font-size: 56px; font-weight: 800; color: var(--gold-deep); line-height: 1; }
-.score-stars { color: var(--gold); font-size: 20px; letter-spacing: 2px; margin: 4px 0; }
-.score-count { font-size: 12px; color: var(--text-light); }
-.reviews-divider { width: 1px; height: 64px; background: var(--gray-200); flex-shrink: 0; }
-.rating-bars { flex: 1; display: flex; flex-direction: column; gap: 7px; min-width: 200px; }
-.bar-row { display: flex; align-items: center; gap: 8px; font-size: 12px; }
-.bar-label { width: 30px; text-align: right; color: var(--text-light); font-weight: 600; }
-.bar-track { flex: 1; height: 6px; background: var(--gray-200); border-radius: 3px; overflow: hidden; }
-.bar-fill { height: 100%; background: var(--gold); border-radius: 3px; }
-.bar-count { width: 28px; font-weight: 600; color: var(--text-light); font-size: 11px; }
-
-.reviews-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 20px; }
-.review-card { background: var(--white); border-radius: var(--radius); padding: 22px; box-shadow: var(--shadow-sm); border: 1px solid var(--gray-100); transition: all .3s; }
-.review-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-md); }
-.review-top { display: flex; align-items: center; gap: 12px; margin-bottom: 12px; }
-.review-avatar { width: 44px; height: 44px; border-radius: 50%; background: linear-gradient(135deg, var(--gold), var(--gold-deep)); display: flex; align-items: center; justify-content: center; font-size: 18px; font-weight: 800; color: var(--text); flex-shrink: 0; font-family: var(--font-display); }
-.review-name { font-weight: 700; font-size: 14px; color: var(--text); }
-.review-meta { font-size: 11px; color: var(--text-light); }
-.review-stars { font-size: 14px; color: var(--gold); letter-spacing: 1px; margin-bottom: 8px; }
-.review-service { display: inline-block; background: var(--gold-bg); color: #7A5500; padding: 3px 10px; border-radius: 50px; font-size: 11px; font-weight: 600; margin-bottom: 9px; }
-.review-text { font-size: 13.5px; color: var(--text-light); line-height: 1.7; }
-.review-verified { display: flex; align-items: center; gap: 5px; font-size: 11px; color: var(--green); margin-top: 10px; font-weight: 600; }
-
-/* ===== FAQ ===== */
-.faq-grid { display: flex; flex-direction: column; gap: 10px; max-width: 800px; margin: 0 auto; }
-.faq-item { background: var(--white); border-radius: var(--radius-sm); border: 1px solid var(--gray-200); overflow: hidden; transition: all .3s; }
-.faq-item.open { border-color: rgba(244,180,0,.5); box-shadow: var(--shadow-sm); }
-.faq-q { display: flex; align-items: center; justify-content: space-between; padding: 16px 20px; cursor: pointer; font-weight: 600; font-size: 15px; color: var(--text); gap: 14px; user-select: none; }
-.faq-q:hover { color: var(--gold-deep); }
-.faq-icon { width: 24px; height: 24px; flex-shrink: 0; background: var(--gold-light); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 18px; font-weight: 700; color: var(--gold-deep); transition: transform .3s, background .3s; }
-.faq-item.open .faq-icon { transform: rotate(45deg); background: var(--gold); }
-.faq-a { display: none; padding: 0 20px 16px; font-size: 14px; color: var(--text-light); line-height: 1.8; }
-.faq-item.open .faq-a { display: block; }
-
-/* ===== BLOG ===== */
-.blog-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 22px; }
-.blog-card { background: var(--white); border-radius: var(--radius); overflow: hidden; box-shadow: var(--shadow-sm); border: 1px solid var(--gray-100); transition: all .3s; cursor: pointer; }
-.blog-card:hover { transform: translateY(-6px); box-shadow: var(--shadow-lg); }
-.blog-thumb { height: 180px; background: linear-gradient(135deg, var(--gold-bg), #FFF0B3); display: flex; align-items: center; justify-content: center; font-size: 56px; position: relative; }
-.blog-cat { position: absolute; top: 14px; left: 14px; background: var(--gold); color: var(--text); padding: 4px 10px; border-radius: 50px; font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: .5px; }
-.blog-body { padding: 20px; }
-.blog-title { font-family: var(--font-display); font-size: 15px; font-weight: 700; color: var(--text); margin-bottom: 8px; line-height: 1.4; }
-.blog-excerpt { font-size: 13px; color: var(--text-light); line-height: 1.6; margin-bottom: 14px; }
-.blog-meta { display: flex; align-items: center; justify-content: space-between; font-size: 12px; color: var(--gray-400); }
-.blog-readmore { color: var(--gold-deep); font-weight: 600; text-decoration: none; }
-.blog-tab { background: var(--gray-100); border: 1px solid var(--gray-200); color: var(--gray-700); padding: 7px 16px; border-radius: 50px; font-size: 13px; font-weight: 600; cursor: pointer; transition: all .2s; font-family: var(--font-body); }
-.blog-tab:hover, .blog-tab.active { background: var(--gold); border-color: var(--gold-deep); color: var(--text); }
-.blog-card.hidden { display: none; }
 
 /* ===== VIDEO FOOTER SECTION ===== */
 .video-footer-section { background: #080810; padding: 70px 20px; }
@@ -777,8 +708,11 @@ footer { background: #0F0F1A; color: rgba(255,255,255,.8); padding: 60px 20px 30
   .cta-actions, .hero-actions { flex-direction: column; align-items: center; }
   .hero-actions .btn-primary, .hero-actions .btn-zalo { width: 100%; justify-content: center; }
   .tracuu-info-grid { grid-template-columns: 1fr; }
+  .reviews-grid { grid-template-columns: 1fr; }
   .reviews-divider { width: 100%; height: 1px; }
-  .reviews-overview { flex-direction: column; }
+  .reviews-overview { flex-direction: column; align-items:flex-start; }
+  .score-number { font-size:40px; }
+  .rating-bars { width:100%; }
 }
 @keyframes fadeUp { from{opacity:0;transform:translateY(24px)} to{opacity:1;transform:translateY(0)} }
 @keyframes slideInLeft { from{opacity:0;transform:translateX(-120px)} to{opacity:1;transform:translateX(0)} }
@@ -856,13 +790,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <a href="#dich-vu">Dịch Vụ</a>
       <a href="#quy-trinh">Quy Trình</a>
       <a href="#tra-cuu">Tra Cứu</a>
-      <a href="#dat-lich">Đặt Lịch</a>
-      <a href="#cua-hang">Cửa Hàng</a>
       <a href="#dao-tao" style="color:var(--gold);font-weight:700;">🎓 Đào Tạo</a>
       <a href="#danh-gia">Đánh Giá</a>
       <a href="#videos">Videos</a>
       <a href="#faq">FAQ</a>
       <a href="#blog">Blog</a>
+      <a href="#ban-do">Bản Đồ</a>
       <a href="#lien-he">Liên Hệ</a>
     </nav>
     <div class="header-cta">
@@ -1269,115 +1202,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </div>
 </section>
 
-<!-- ===== FORM ĐẶT LỊCH ===== -->
-<section class="section section-dark" id="dat-lich" style="background:linear-gradient(135deg,#0F0F1A 0%,#1A1A2E 60%,#16213E 100%);padding-top:0;">
-  <div class="container">
-    <div class="booking-wrap">
-      <!-- Info bên trái -->
-      <div class="booking-info">
-        <span class="section-label" style="background:rgba(244,180,0,.2);color:var(--gold);">Đặt Lịch Ngay</span>
-        <h2 class="section-title light" style="margin-bottom:24px;">Để Lại Thông Tin –<br><span style="color:var(--gold);">Thợ Gọi Lại Ngay</span></h2>
-        <p style="color:rgba(255,255,255,.65);font-size:15px;line-height:1.8;margin-bottom:32px;">Không muốn gọi ngay? Điền form – thợ sẽ liên hệ lại trong vòng <strong style="color:var(--gold);">5 phút</strong>, xác nhận thông tin và báo giá luôn.</p>
-
-        <div class="booking-info-item">
-          <div class="booking-info-icon">⚡</div>
-          <div><strong>Phản hồi trong 5 phút</strong><span>Thợ gọi lại xác nhận ngay sau khi nhận form</span></div>
-        </div>
-        <div class="booking-info-item">
-          <div class="booking-info-icon">💰</div>
-          <div><strong>Báo giá minh bạch qua điện thoại</strong><span>Biết giá trước, đồng ý mới cho thợ đến</span></div>
-        </div>
-        <div class="booking-info-item">
-          <div class="booking-info-icon">🛡</div>
-          <div><strong>Không ràng buộc khi đặt lịch</strong><span>Hủy lịch bất cứ lúc nào, hoàn toàn miễn phí</span></div>
-        </div>
-        <div class="booking-info-item">
-          <div class="booking-info-icon">📍</div>
-          <div><strong>Phục vụ toàn TP.HCM</strong><span>Thợ đến tận nơi bạn cần, không phụ thu xa</span></div>
-        </div>
-
-        <!-- Hoặc gọi trực tiếp -->
-        <div style="margin-top:8px;padding:18px 20px;background:rgba(244,180,0,.1);border:1px solid rgba(244,180,0,.3);border-radius:14px;">
-          <p style="font-size:13px;color:rgba(255,255,255,.6);margin-bottom:8px;">Hoặc liên hệ trực tiếp:</p>
-          <a href="tel:0932654809" style="display:flex;align-items:center;gap:10px;text-decoration:none;">
-            <span style="font-size:22px;">📞</span>
-            <span style="font-family:var(--font-display);font-size:22px;font-weight:800;color:var(--gold);">0932 654 809</span>
-          </a>
-        </div>
-      </div>
-
-      <!-- Form bên phải -->
-      <div>
-        <div class="booking-form-card" id="bookingForm">
-          <div class="form-title">📋 Đặt Lịch Sửa Khóa</div>
-          <div class="form-subtitle">Điền thông tin – thợ liên hệ lại trong 5 phút</div>
-
-          <div class="form-row">
-            <div class="form-group">
-              <label>Họ & Tên *</label>
-              <input type="text" id="f-name" placeholder="Nguyễn Văn A">
-            </div>
-            <div class="form-group">
-              <label>Số Điện Thoại *</label>
-              <input type="tel" id="f-phone" placeholder="0932 xxx xxx">
-            </div>
-          </div>
-
-          <div class="form-row full">
-            <div class="form-group">
-              <label>Dịch Vụ Cần Hỗ Trợ *</label>
-              <select id="f-service">
-                <option value="">-- Chọn dịch vụ --</option>
-                <option>Mở khóa xe máy</option>
-                <option>Làm chìa / Smartkey xe máy</option>
-                <option>Mở khóa cửa ô tô</option>
-                <option>Sửa khóa cửa nhà</option>
-                <option>Mở két sắt</option>
-                <option>Remote cửa cuốn</option>
-                <option>Chép thẻ từ</option>
-                <option>Khóa vân tay / Điện tử</option>
-                <option>Kích bình xe</option>
-                <option>Sửa khóa tủ / Vali</option>
-                <option>Lắp đặt & Thi công khóa</option>
-                <option>Khác</option>
-              </select>
-            </div>
-          </div>
-
-          <div class="form-row full">
-            <div class="form-group">
-              <label>Địa Chỉ Cần Sửa *</label>
-              <input type="text" id="f-address" placeholder="Số nhà, đường, phường, quận...">
-            </div>
-          </div>
-
-          <div class="form-row full">
-            <div class="form-group">
-              <label>Mô Tả Thêm (không bắt buộc)</label>
-              <textarea id="f-note" placeholder="VD: Xe Honda Air Blade đời 2022, quên chìa trong nhà, cần thợ đến gấp..."></textarea>
-            </div>
-          </div>
-
-          <button class="form-submit" onclick="submitBooking()">
-            🚀 Đặt Lịch Ngay – Thợ Gọi Lại Trong 5 Phút
-          </button>
-          <p class="form-note">🔒 Thông tin của bạn được bảo mật tuyệt đối</p>
-        </div>
-
-        <!-- Success state -->
-        <div class="booking-form-card form-success" id="bookingSuccess">
-          <div class="success-icon">🎉</div>
-          <h3>Đặt Lịch Thành Công!</h3>
-          <p>Cảm ơn bạn đã tin tưởng <strong>Mở Khóa Sài Gòn</strong>.<br>Thợ sẽ gọi lại cho bạn trong vòng <strong style="color:var(--gold-deep);">5 phút</strong> để xác nhận.</p>
-          <br>
-          <p style="font-size:13px;color:var(--text-light);">Cần gấp hơn? Gọi ngay:</p>
-          <a href="tel:0932654809" class="btn-primary" style="display:inline-flex;margin-top:10px;">📞 0932 654 809</a>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
 <!-- ===== KHU VỰC ===== -->
 <section class="section" id="khu-vuc">
   <div class="container">
@@ -1456,53 +1280,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </div>
     <div style="margin-top:16px;padding:14px 18px;background:var(--white);border-radius:10px;border:1px dashed rgba(244,180,0,.4);text-align:center;">
       <p style="font-size:13px;color:var(--text-light);">⚙️ <strong>Dữ liệu đang được cập nhật thêm.</strong> Không tìm thấy dòng xe? Gọi <a href="tel:0932654809" style="color:var(--gold-deep);font-weight:700;">0932 654 809</a> để hỗ trợ ngay.</p>
-    </div>
-  </div>
-</section>
-
-<!-- ===== CỬA HÀNG ===== -->
-<section class="section" id="cua-hang">
-  <div class="container">
-    <div class="section-header center">
-      <span class="section-label">Cửa Hàng</span>
-      <h2 class="section-title">Đồ Nghề & <span class="gold">Cửa Hàng Khóa</span></h2>
-      <p class="section-desc">Cung cấp dụng cụ thợ khóa chuyên nghiệp và các loại khóa chất lượng cao</p>
-    </div>
-    <div class="shop-grid">
-      <div class="shop-card">
-        <div class="shop-card-head">
-          <div class="shop-icon-wrap">🔧</div>
-          <div><h3>Đồ Nghề Thợ Khóa</h3><p>Dụng cụ chuyên nghiệp, chính hãng</p></div>
-        </div>
-        <div class="shop-card-body">
-          <div class="shop-item-list">
-            <div class="shop-item"><span>🗝</span> Bộ dụng cụ mở khóa cổ điển</div>
-            <div class="shop-item"><span>⚙️</span> Máy làm chìa xe máy</div>
-            <div class="shop-item"><span>📡</span> Thiết bị lập trình smartkey</div>
-            <div class="shop-item"><span>🔌</span> Máy copy / clone remote</div>
-            <div class="shop-item"><span>🪛</span> Bộ pick lock chuyên nghiệp</div>
-            <div class="shop-item"><span>🔩</span> Phụ kiện khóa các loại</div>
-          </div>
-          <div class="shop-cta">🛒 Tư vấn & đặt hàng: <a href="tel:0932654809" style="color:#7A5500;font-weight:800;">0932 654 809</a></div>
-        </div>
-      </div>
-      <div class="shop-card">
-        <div class="shop-card-head">
-          <div class="shop-icon-wrap">🔐</div>
-          <div><h3>Cửa Hàng Khóa</h3><p>Khóa cửa, két sắt, khóa xe các loại</p></div>
-        </div>
-        <div class="shop-card-body">
-          <div class="shop-item-list">
-            <div class="shop-item"><span>🚪</span> Khóa cửa tay gạt & tay nắm</div>
-            <div class="shop-item"><span>📱</span> Khóa điện tử thông minh</div>
-            <div class="shop-item"><span>🗄</span> Két sắt điện tử & cơ học</div>
-            <div class="shop-item"><span>🔑</span> Chìa khoá xe máy các dòng</div>
-            <div class="shop-item"><span>🎛</span> Remote cửa cuốn các hãng</div>
-            <div class="shop-item"><span>🏠</span> Phụ kiện khóa chung cư</div>
-          </div>
-          <div class="shop-cta">📦 Shop online sắp ra mắt – theo dõi Fanpage để cập nhật!</div>
-        </div>
-      </div>
     </div>
   </div>
 </section>
@@ -2066,67 +1843,49 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <p class="section-desc light">Ảnh thực tế từ các ca làm việc — sửa khóa cửa, chìa xe, két sắt, khóa vân tay, khóa vali. Tất cả đều do đội thợ Mở Khóa Sài Gòn thực hiện.</p>
     </div>
 
-    <div class="video-footer-grid">
+    <div class="video-footer-grid" style="grid-template-columns:repeat(2,1fr);">
 
-      <!-- Video 1: YouTube – thay YOUR_ID_1 bằng ID video thật -->
+      <!-- Video 1: UMv7JKy7aoc -->
       <div class="video-footer-item" id="vfi-1">
         <div class="vf-badge youtube">▶ YouTube</div>
-        <div class="video-footer-thumb" id="vft-1" onclick="playVideo('vfi-1','vft-1','YOUR_ID_1')">
-          <div class="vf-play">▶</div>
-          <p class="vf-title">Mở khóa Honda Air Blade trong 60 giây – ban đêm tại Bình Thạnh</p>
+        <div class="video-footer-thumb" id="vft-1" onclick="playVideo('vfi-1','vft-1','UMv7JKy7aoc')"
+             style="background:url('https://img.youtube.com/vi/UMv7JKy7aoc/maxresdefault.jpg') center/cover no-repeat;">
+          <div style="position:absolute;inset:0;background:rgba(0,0,0,0.35);border-radius:16px;"></div>
+          <div class="vf-play" style="position:relative;z-index:1;">▶</div>
+          <p class="vf-title" style="position:relative;z-index:1;">Video thực tế – Mở Khóa Sài Gòn</p>
         </div>
-        <!-- <iframe src="https://www.youtube.com/embed/YOUR_ID_1?autoplay=1" allowfullscreen allow="autoplay"></iframe> -->
-        <span class="vf-duration">1:02</span>
       </div>
 
-      <!-- Video 2: YouTube -->
+      <!-- Video 2: IJb2vBUOBHY (Shorts) -->
       <div class="video-footer-item" id="vfi-2">
-        <div class="vf-badge youtube">▶ YouTube</div>
-        <div class="video-footer-thumb" id="vft-2" onclick="playVideo('vfi-2','vft-2','YOUR_ID_2')">
-          <div class="vf-play">▶</div>
-          <p class="vf-title">Làm smartkey Honda Vision tại nhà khách – lập trình Xhorse VVDI</p>
+        <div class="vf-badge youtube">▶ YouTube Shorts</div>
+        <div class="video-footer-thumb" id="vft-2" onclick="playVideo('vfi-2','vft-2','IJb2vBUOBHY')"
+             style="background:url('https://img.youtube.com/vi/IJb2vBUOBHY/maxresdefault.jpg') center/cover no-repeat;">
+          <div style="position:absolute;inset:0;background:rgba(0,0,0,0.35);border-radius:16px;"></div>
+          <div class="vf-play" style="position:relative;z-index:1;">▶</div>
+          <p class="vf-title" style="position:relative;z-index:1;">Video thực tế – Mở Khóa Sài Gòn</p>
         </div>
-        <!-- <iframe src="https://www.youtube.com/embed/YOUR_ID_2?autoplay=1" allowfullscreen allow="autoplay"></iframe> -->
-        <span class="vf-duration">4:35</span>
       </div>
 
-      <!-- Video 3: TikTok -->
+      <!-- Video 3: yf8VoDTgOrs (Shorts) -->
       <div class="video-footer-item" id="vfi-3">
-        <div class="vf-badge tiktok">♪ TikTok</div>
-        <div class="video-footer-thumb" id="vft-3" onclick="openTikTok('YOUR_TIKTOK_URL_1')">
-          <div class="vf-play">▶</div>
-          <p class="vf-title">Mở khóa Toyota Vios không trầy xước – kỹ thuật Air Wedge chuyên nghiệp</p>
+        <div class="vf-badge youtube">▶ YouTube Shorts</div>
+        <div class="video-footer-thumb" id="vft-3" onclick="playVideo('vfi-3','vft-3','yf8VoDTgOrs')"
+             style="background:url('https://img.youtube.com/vi/yf8VoDTgOrs/maxresdefault.jpg') center/cover no-repeat;">
+          <div style="position:absolute;inset:0;background:rgba(0,0,0,0.35);border-radius:16px;"></div>
+          <div class="vf-play" style="position:relative;z-index:1;">▶</div>
+          <p class="vf-title" style="position:relative;z-index:1;">Video thực tế – Mở Khóa Sài Gòn</p>
         </div>
-        <span class="vf-duration">0:58</span>
       </div>
 
-      <!-- Video 4: YouTube -->
+      <!-- Video 4: WokASpeN_6s (Shorts) -->
       <div class="video-footer-item" id="vfi-4">
-        <div class="vf-badge youtube">▶ YouTube</div>
-        <div class="video-footer-thumb" id="vft-4" onclick="playVideo('vfi-4','vft-4','YOUR_ID_3')">
-          <div class="vf-play">▶</div>
-          <p class="vf-title">Xử lý két sắt điện tử quên mật khẩu – không phá két, nguyên vẹn 100%</p>
-        </div>
-        <!-- <iframe src="https://www.youtube.com/embed/YOUR_ID_3?autoplay=1" allowfullscreen allow="autoplay"></iframe> -->
-        <span class="vf-duration">3:20</span>
-      </div>
-
-      <!-- Video 5: TikTok -->
-      <div class="video-footer-item" id="vfi-5">
-        <div class="vf-badge tiktok">♪ TikTok</div>
-        <div class="video-footer-thumb" id="vft-5" onclick="openTikTok('YOUR_TIKTOK_URL_2')">
-          <div class="vf-play">▶</div>
-          <p class="vf-title">Bộ dụng cụ thợ khóa 16 năm – Xhorse, pick lock, key decoder chuyên nghiệp</p>
-        </div>
-        <span class="vf-duration">1:15</span>
-      </div>
-
-      <!-- Video 6: Sắp ra mắt -->
-      <div class="video-footer-item">
-        <div class="vf-badge coming">⏳ Sắp ra mắt</div>
-        <div class="video-footer-thumb" style="cursor:default;">
-          <div class="vf-play" style="background:rgba(255,255,255,0.1);box-shadow:none;font-size:24px;">📹</div>
-          <p class="vf-title" style="color:rgba(255,255,255,.5);">Video mới đang được quay<br><span style="color:var(--gold);font-size:12px;">Theo dõi kênh để xem sớm nhất</span></p>
+        <div class="vf-badge youtube">▶ YouTube Shorts</div>
+        <div class="video-footer-thumb" id="vft-4" onclick="playVideo('vfi-4','vft-4','WokASpeN_6s')"
+             style="background:url('https://img.youtube.com/vi/WokASpeN_6s/maxresdefault.jpg') center/cover no-repeat;">
+          <div style="position:absolute;inset:0;background:rgba(0,0,0,0.35);border-radius:16px;"></div>
+          <div class="vf-play" style="position:relative;z-index:1;">▶</div>
+          <p class="vf-title" style="position:relative;z-index:1;">Video thực tế – Mở Khóa Sài Gòn</p>
         </div>
       </div>
 
@@ -2145,11 +1904,102 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       </a>
     </div>
 
-    <p style="text-align:center;margin-top:20px;font-size:12px;color:rgba(255,255,255,.3);">
-      💡 Để xem video: Thay <code style="color:rgba(244,180,0,.7)">YOUR_ID_1</code> bằng ID video YouTube thật trong phần code HTML
-    </p>
+
   </div>
 </section>
+
+<!-- ===== GOOGLE MAPS ===== -->
+<section style="padding:0;background:#0F0F1A;" id="ban-do">
+  <div style="max-width:1200px;margin:0 auto;padding:60px 20px;">
+    <div style="text-align:center;margin-bottom:36px;">
+      <span style="display:inline-block;background:rgba(244,180,0,.15);color:var(--gold);padding:5px 14px;border-radius:50px;font-size:12px;font-weight:700;letter-spacing:1px;text-transform:uppercase;margin-bottom:14px;">Địa Điểm</span>
+      <h2 style="font-family:var(--font-display);font-size:clamp(22px,3vw,34px);font-weight:800;color:var(--white);margin-bottom:10px;">Tìm <span style="color:var(--gold);">Mở Khóa Sài Gòn</span></h2>
+      <p style="font-size:15px;color:rgba(255,255,255,.65);">153/89 Điện Biên Phủ, Quận Bình Thạnh, TP. Hồ Chí Minh</p>
+    </div>
+
+    <!-- Maps + Info layout -->
+    <div style="display:grid;grid-template-columns:1fr 340px;gap:24px;align-items:start;">
+
+      <!-- Google Maps Embed -->
+      <div style="border-radius:20px;overflow:hidden;box-shadow:0 8px 40px rgba(0,0,0,0.4);border:1px solid rgba(244,180,0,0.2);position:relative;">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.0!2d106.7009!3d10.8026!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752f2bcabfab05%3A0xe63c2b1dcf88095b!2zTe%1EDF%20Kho%C3%A1%20S%C3%A0i%20G%C3%B2n!5e0!3m2!1svi!2svn!4v1716000000000!5m2!1svi!2svn"
+          width="100%"
+          height="420"
+          style="border:0;display:block;"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          title="Vị trí Mở Khóa Sài Gòn – 153/89 Điện Biên Phủ, Quận Bình Thạnh, TP.HCM">
+        </iframe>
+      </div>
+
+      <!-- Info card -->
+      <div style="display:flex;flex-direction:column;gap:16px;">
+
+        <div style="background:rgba(255,255,255,.06);border:1px solid rgba(244,180,0,.2);border-radius:16px;padding:22px;">
+          <div style="font-family:var(--font-display);font-size:16px;font-weight:800;color:var(--white);margin-bottom:18px;padding-bottom:14px;border-bottom:1px solid rgba(255,255,255,.08);">📍 Thông Tin Liên Hệ</div>
+
+          <div style="display:flex;flex-direction:column;gap:14px;">
+            <div style="display:flex;gap:12px;align-items:flex-start;">
+              <span style="font-size:18px;flex-shrink:0;margin-top:2px;">📌</span>
+              <div>
+                <div style="font-size:12px;color:rgba(255,255,255,.5);font-weight:600;text-transform:uppercase;letter-spacing:.5px;margin-bottom:3px;">Địa chỉ</div>
+                <div style="font-size:14px;color:rgba(255,255,255,.9);line-height:1.5;">153/89 Điện Biên Phủ<br>Quận Bình Thạnh, TP.HCM</div>
+              </div>
+            </div>
+            <div style="display:flex;gap:12px;align-items:flex-start;">
+              <span style="font-size:18px;flex-shrink:0;margin-top:2px;">📞</span>
+              <div>
+                <div style="font-size:12px;color:rgba(255,255,255,.5);font-weight:600;text-transform:uppercase;letter-spacing:.5px;margin-bottom:3px;">Hotline</div>
+                <a href="tel:0932654809" style="font-size:16px;font-weight:800;color:var(--gold);text-decoration:none;font-family:var(--font-display);">0932 654 809</a>
+              </div>
+            </div>
+            <div style="display:flex;gap:12px;align-items:flex-start;">
+              <span style="font-size:18px;flex-shrink:0;margin-top:2px;">💬</span>
+              <div>
+                <div style="font-size:12px;color:rgba(255,255,255,.5);font-weight:600;text-transform:uppercase;letter-spacing:.5px;margin-bottom:3px;">Zalo</div>
+                <a href="https://zalo.me/0908679343" target="_blank" style="font-size:16px;font-weight:800;color:#3B9EFF;text-decoration:none;font-family:var(--font-display);">0908 679 343</a>
+              </div>
+            </div>
+            <div style="display:flex;gap:12px;align-items:flex-start;">
+              <span style="font-size:18px;flex-shrink:0;margin-top:2px;">🕐</span>
+              <div>
+                <div style="font-size:12px;color:rgba(255,255,255,.5);font-weight:600;text-transform:uppercase;letter-spacing:.5px;margin-bottom:3px;">Giờ hoạt động</div>
+                <div style="font-size:14px;color:rgba(255,255,255,.9);">24/7 – Kể cả lễ Tết</div>
+              </div>
+            </div>
+            <div style="display:flex;gap:12px;align-items:flex-start;">
+              <span style="font-size:18px;flex-shrink:0;margin-top:2px;">🚗</span>
+              <div>
+                <div style="font-size:12px;color:rgba(255,255,255,.5);font-weight:600;text-transform:uppercase;letter-spacing:.5px;margin-bottom:3px;">Khu vực phục vụ</div>
+                <div style="font-size:14px;color:rgba(255,255,255,.9);">Toàn TP. Hồ Chí Minh</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- CTA Buttons -->
+        <a href="https://maps.app.goo.gl/6r3Qo6SKgsrM6ndy8" target="_blank"
+          style="display:flex;align-items:center;justify-content:center;gap:8px;padding:13px 20px;border-radius:12px;background:linear-gradient(135deg,var(--gold),var(--gold-deep));color:var(--text);font-weight:700;font-size:14px;text-decoration:none;transition:all .25s;box-shadow:var(--shadow-gold);">
+          🗺 Xem Trên Google Maps
+        </a>
+        <a href="tel:0932654809"
+          style="display:flex;align-items:center;justify-content:center;gap:8px;padding:13px 20px;border-radius:12px;background:rgba(255,255,255,.07);color:var(--white);font-weight:700;font-size:14px;text-decoration:none;border:1px solid rgba(255,255,255,.15);transition:all .25s;">
+          📞 Gọi Ngay: 0932 654 809
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Responsive maps -->
+<style>
+@media(max-width:900px){
+  #ban-do > div > div:last-of-type { grid-template-columns:1fr !important; }
+  #ban-do iframe { height:300px !important; }
+}
+</style>
 
 <!-- ===== FOOTER ===== -->
 <footer id="lien-he">
@@ -2174,10 +2024,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <li><a href="tel:0932654809">→ Mở khóa cửa ô tô</a></li>
         <li><a href="tel:0932654809">→ Remote cửa cuốn</a></li>
         <li><a href="tel:0932654809">→ Mở két sắt</a></li>
-        <li><a href="tel:0932654809">→ Khóa vân tay</a></li>
-        <li><a href="tel:0932654809">→ Kích bình xe</a></li>
-        <li><a href="#dat-lich">→ Đặt lịch online</a></li>
-        <li><a href="#dao-tao" style="color:var(--gold);font-weight:600;">→ 🎓 Đào Tạo Thợ Khóa</a></li>
       </ul>
     </div>
     <div class="footer-col">
@@ -2195,7 +2041,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <h4>Liên Hệ</h4>
       <div class="footer-contact-item"><span class="icon">📞</span><div>Hotline: <a href="tel:0932654809">0932 654 809</a></div></div>
       <div class="footer-contact-item"><span class="icon">💬</span><div>Zalo: <a href="https://zalo.me/0908679343" target="_blank">0932 654 809</a></div></div>
-      <div class="footer-contact-item"><span class="icon">📍</span><div>Phục vụ toàn TP.HCM và khu vực lân cận</div></div>
+      <div class="footer-contact-item"><span class="icon">📍</span><div>153/89 Điện Biên Phủ, Q.Bình Thạnh, TP.HCM</div></div>
       <div class="footer-contact-item"><span class="icon">🕒</span><div>Hoạt động 24/7 kể cả ngày lễ</div></div>
     </div>
   </div>
@@ -2436,17 +2282,13 @@ function searchOTo(){
 
 // ===== Video footer: play YouTube =====
 function playVideo(itemId, thumbId, ytId){
-  if(!ytId||ytId.startsWith('YOUR_')){
-    alert('Video đang được cập nhật. Vui lòng quay lại sau!');
-    return;
-  }
   const item=document.getElementById(itemId);
   const thumb=document.getElementById(thumbId);
   const iframe=document.createElement('iframe');
-  iframe.src='https://www.youtube.com/embed/'+ytId+'?autoplay=1&rel=0';
+  iframe.src='https://www.youtube.com/embed/'+ytId+'?autoplay=1&rel=0&playsinline=1';
   iframe.allowFullscreen=true;
-  iframe.allow='autoplay; fullscreen';
-  iframe.style.cssText='position:absolute;inset:0;width:100%;height:100%;border:none;';
+  iframe.allow='autoplay; fullscreen; picture-in-picture';
+  iframe.style.cssText='position:absolute;inset:0;width:100%;height:100%;border:none;border-radius:16px;';
   item.appendChild(iframe);
   thumb.classList.add('hidden');
 }
@@ -2484,40 +2326,6 @@ function switchMedia(tab, btn){
   btn.classList.add('active');
   document.getElementById('media-anh').classList.toggle('active', tab==='anh');
   document.getElementById('media-video').classList.toggle('active', tab==='video');
-}
-
-// ===== Form đặt lịch =====
-function submitBooking(){
-  const name  = document.getElementById('f-name').value.trim();
-  const phone = document.getElementById('f-phone').value.trim();
-  const svc   = document.getElementById('f-service').value;
-  const addr  = document.getElementById('f-address').value.trim();
-
-  if(!name || !phone || !svc || !addr){
-    alert('Vui lòng điền đầy đủ các trường bắt buộc (*)');
-    return;
-  }
-  const phoneReg = /^(0|\+84)[0-9]{8,10}$/;
-  if(!phoneReg.test(phone.replace(/\s/g,''))){
-    alert('Số điện thoại không hợp lệ, vui lòng kiểm tra lại!');
-    return;
-  }
-
-  // Tracking conversion
-  if(typeof gtag !== 'undefined') gtag('event','booking_submit',{event_category:'lead',event_label:svc,value:1});
-  if(typeof fbq  !== 'undefined') fbq('track','Lead',{content_name:svc});
-  if(typeof ttq  !== 'undefined') ttq.track('SubmitForm',{content_name:svc});
-
-  // Gửi sang Zalo (mở app Zalo với nội dung đặt lịch)
-  const msg = `ĐẶT LỊCH SỬA KHÓA\n👤 ${name}\n📞 ${phone}\n🔧 ${svc}\n📍 ${addr}\n📝 ${document.getElementById('f-note').value||'Không có'}`;
-  // Option 1: mở Zalo OA (thay 0932654809 bằng Zalo OA ID nếu có)
-  // window.open('https://zalo.me/0908679343?msg='+encodeURIComponent(msg),'_blank');
-
-  // Hiển thị success state
-  document.getElementById('bookingForm').style.display='none';
-  const s = document.getElementById('bookingSuccess');
-  s.style.display='block';
-  window.scrollTo({top:s.offsetTop-100,behavior:'smooth'});
 }
 
 // ===== Animate process steps =====
