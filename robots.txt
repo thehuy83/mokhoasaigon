@@ -1,0 +1,18 @@
+# robots.txt – mokhoasaigon.vn
+User-agent: *
+Allow: /
+
+# Cho phép crawl tất cả
+Disallow:
+
+# Sitemap
+Sitemap: https://mokhoasaigon.vn/sitemap.xml
+
+# Tối ưu crawl budget
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 1
+
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 2

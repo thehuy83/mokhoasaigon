@@ -1,0 +1,7 @@
+# Netlify redirects – mokhoasaigon.vn
+# HTTP → HTTPS (Netlify tự xử lý SSL, file này dự phòng)
+http://mokhoasaigon.vn/*     https://mokhoasaigon.vn/:splat    301!
+http://www.mokhoasaigon.vn/* https://mokhoasaigon.vn/:splat    301!
+https://www.mokhoasaigon.vn/* https://mokhoasaigon.vn/:splat   301!
+# SPA fallback
+/*    /mo-khoa-sai-gon.html   200
