@@ -443,6 +443,23 @@ fbq('track', 'PageView');
   }
 }
 </script>
+<!-- Google Call Conversion Tracking -->
+<script>
+function gtag_report_conversion(url) {
+  var callback = function () {
+    if (typeof(url) != 'undefined') {
+      window.location = url;
+    }
+  };
+  gtag('event', 'conversion', {
+      'send_to': 'AW-704144725/XhsNCJies8QcENXK4c8C',
+      'value': 1.0,
+      'currency': 'VND',
+      'event_callback': callback
+  });
+  return false;
+}
+</script>
 </head>
 <body>
 
@@ -451,7 +468,7 @@ fbq('track', 'PageView');
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 <!-- ===== POPUP THỢ ONLINE ===== -->
-<a href="tel:+84932654809" class="online-popup" id="onlinePopup" style="text-decoration:none;">
+<a href="tel:+84932654809" class="online-popup" id="onlinePopup" style="text-decoration:none;" onclick="return gtag_report_conversion('tel:+84932654809');">
   <div class="popup-dot"></div>
   <div class="popup-text">
     <strong>🔧 Thợ đang online!</strong>
@@ -479,7 +496,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <a href="#lien-he">Liên Hệ</a>
     </nav>
     <div class="header-cta">
-      <a href="tel:+84932654809" class="btn-hotline">
+      <a href="tel:+84932654809" class="btn-hotline" onclick="return gtag_report_conversion('tel:+84932654809');">
         <span>📞</span><span class="hotline-num">0932 654 809</span>
       </a>
       <button class="nav-toggle" id="navToggle" aria-label="Menu">
@@ -521,7 +538,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <div class="warranty-inline animate-up delay-3">🔒 Sửa Đúng Kỹ Thuật – Bền Lâu Dài</div>
 
       <div class="hero-actions animate-up delay-4">
-        <a href="tel:+84932654809" class="btn-primary">📞 GỌI NGAY</a>
+        <a href="tel:+84932654809" class="btn-primary" onclick="return gtag_report_conversion('tel:+84932654809');">📞 GỌI NGAY</a>
         <a href="https://zalo.me/0908679343" class="btn-zalo" target="_blank">💬 NHẮN ZALO</a>
       </div>
       <div class="hero-stats animate-up delay-4">
@@ -717,22 +734,22 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <p class="section-desc">Đầy đủ dịch vụ mở khóa – sửa khóa – làm chìa. Thợ lành nghề, dụng cụ chuyên nghiệp, đến tận nơi.</p>
     </div>
     <div class="services-grid">
-      <div class="service-card"><div class="service-icon">🏍</div><div class="service-name">Mở Khóa Xe Máy</div><p class="service-desc">Quên chìa, gãy chìa, hỏng ổ khóa xe máy giữa đường? Thợ đến tận nơi trong 15–25 phút, mở khóa Honda, Yamaha, SYM, Piaggio… không trầy xước, không làm hỏng cổ xe. Giá báo trước khi làm.</p><a href="tel:+84932654809" class="service-link">Gọi ngay →</a><a href="mo-khoa-xe-may.html" class="service-link-secondary">Xem chi tiết →</a></div>
-      <div class="service-card"><div class="service-icon">🔑</div><div class="service-name">Làm Chìa Xe Máy</div><p class="service-desc">Làm chìa dự phòng hoặc làm mới hoàn toàn ngay tại chỗ cho tất cả dòng xe máy phổ biến tại Việt Nam. Chìa cắt chính xác, vào ổ êm, không cần dắt xe đi đâu.</p><a href="tel:+84932654809" class="service-link">Gọi ngay →</a><a href="lam-chia-xe-may.html" class="service-link-secondary">Xem chi tiết →</a></div>
-      <div class="service-card"><div class="service-icon">🛵</div><div class="service-name">Mở Cốp Yên Xe</div><p class="service-desc">Cốp yên Honda SH, Air Blade, Vision, Yamaha NVX... bị kẹt hoặc mất chìa — xử lý nhanh tại chỗ, không để lại dấu vết, không hỏng lẫy hay nệm yên. Phục vụ 24/7.</p><a href="tel:+84932654809" class="service-link">Gọi ngay →</a><a href="mo-cop-xe.html" class="service-link-secondary">Xem chi tiết →</a></div>
-      <div class="service-card"><div class="service-icon">🚪</div><div class="service-name">Sửa Khóa Cửa</div><p class="service-desc">Sửa, thay mới ổ khóa cửa nhà, cửa phòng, cửa sắt bị hỏng, kẹt lưỡi gà, tuột chốt. Tư vấn chọn khóa chất lượng phù hợp ngân sách, lắp đặt đúng kỹ thuật ngay tại nhà.</p><a href="tel:+84932654809" class="service-link">Gọi ngay →</a><a href="mo-khoa-cua-cuon.html" class="service-link-secondary">Xem chi tiết →</a></div>
-      <div class="service-card"><div class="service-icon">📡</div><div class="service-name">Smartkey Xe Máy</div><p class="service-desc">Lập trình, sao chép, sửa chữa và làm thêm smartkey dự phòng cho Honda, Yamaha, SYM. Dùng thiết bị Xhorse VVDI chuyên nghiệp, lập trình chuẩn xác, không lỗi tín hiệu.</p><a href="tel:+84932654809" class="service-link">Gọi ngay →</a><a href="lam-chia-smartkey.html" class="service-link-secondary">Xem chi tiết →</a></div>
-      <div class="service-card"><div class="service-icon">🎛</div><div class="service-name">Remote Cửa Cuốn</div><p class="service-desc">Sửa, lập trình lại và làm thêm remote cửa cuốn garage, nhà xưởng, văn phòng. Hỗ trợ tất cả tần số 315MHz, 433MHz. Có remote dự phòng ngay trong ngày.</p><a href="tel:+84932654809" class="service-link">Gọi ngay →</a><a href="sua-remote-cua-cuon.html" class="service-link-secondary">Xem chi tiết →</a></div>
-      <div class="service-card"><div class="service-icon">🗄</div><div class="service-name">Mở Két Sắt</div><p class="service-desc">Quên mật khẩu két sắt điện tử hoặc hỏng cơ chế? Thợ xử lý bằng kỹ thuật chuyên dụng, mở được mà két vẫn hoạt động bình thường, không phá két, không hỏng khoá trong.</p><a href="tel:+84932654809" class="service-link">Gọi ngay →</a><a href="mo-ket-sat.html" class="service-link-secondary">Xem chi tiết →</a></div>
-      <div class="service-card"><div class="service-icon">🔧</div><div class="service-name">Sửa Khóa Tận Nơi</div><p class="service-desc">Bất kỳ loại khóa nào hỏng — thợ đến tận nhà, văn phòng, chung cư, kho xưởng để kiểm tra và sửa ngay tại chỗ. Không mất thời gian di chuyển, không lo gián đoạn công việc.</p><a href="tel:+84932654809" class="service-link">Gọi ngay →</a><a href="tho-sua-khoa-uy-tin.html" class="service-link-secondary">Xem chi tiết →</a></div>
-      <div class="service-card"><div class="service-icon">📱</div><div class="service-name">Làm Mới Remote Xe</div><p class="service-desc">Remote xe máy mất tín hiệu, vỏ vỡ, pin chết? Thay vỏ mới, lập trình lại chip, test hoạt động trước khi giao. Giá thấp hơn 60–70% so với mua mới tại đại lý.</p><a href="tel:+84932654809" class="service-link">Gọi ngay →</a><a href="lam-moi-remote-xe.html" class="service-link-secondary">Xem chi tiết →</a></div>
-      <div class="service-card"><div class="service-icon">🚗</div><div class="service-name">Mở Khóa Cửa Ô Tô</div><p class="service-desc">Khóa nhầm chìa trong xe Toyota, Honda, Hyundai, Mazda…? Thợ dùng kỹ thuật Air Wedge và Long Reach Tool chuyên nghiệp, mở cửa trong 5–10 phút, tuyệt đối không trầy sơn.</p><a href="tel:+84932654809" class="service-link">Gọi ngay →</a><a href="mo-khoa-o-to.html" class="service-link-secondary">Xem chi tiết →</a></div>
-      <div class="service-card"><div class="service-icon">💳</div><div class="service-name">Chép Thẻ Từ</div><p class="service-desc">Sao chép, làm thêm thẻ từ chung cư, văn phòng, nhà xưởng, bãi xe. Hỗ trợ thẻ RFID 125kHz (EM4100, T5577) và 13.56MHz (Mifare, NFC). Copy xong test ngay tại chỗ.</p><a href="tel:+84932654809" class="service-link">Gọi ngay →</a><a href="chep-the-tu.html" class="service-link-secondary">Xem chi tiết →</a></div>
-      <div class="service-card"><div class="service-icon">🔩</div><div class="service-name">Sửa Khóa Tủ</div><p class="service-desc">Tủ văn phòng, tủ hồ sơ, tủ quần áo bị hỏng khóa hoặc gãy chìa trong ổ? Thợ sửa hoặc thay ổ mới ngay tại nhà, làm thêm chìa dự phòng tránh mất lần nữa.</p><a href="tel:+84932654809" class="service-link">Gọi ngay →</a><a href="sua-khoa-tu.html" class="service-link-secondary">Xem chi tiết →</a></div>
-      <div class="service-card"><div class="service-icon">🧳</div><div class="service-name">Sửa Khóa Vali</div><p class="service-desc">Vali du lịch bị kẹt khóa kéo, quên mã số khóa chữ số, hoặc hỏng cơ chế? Mở và sửa tại chỗ, nhanh gọn trước chuyến đi. Hỗ trợ khóa TSA, khóa số, khóa kéo các loại.</p><a href="tel:+84932654809" class="service-link">Gọi ngay →</a><a href="sua-khoa-vali.html" class="service-link-secondary">Xem chi tiết →</a></div>
-      <div class="service-card"><div class="service-icon">🔋</div><div class="service-name">Kích Bình Xe</div><p class="service-desc">Xe máy hoặc ô tô hết điện bình giữa đường, trong bãi đỗ, sân chung cư? Thợ đến kích bình tại chỗ trong 15–25 phút, kiểm tra bình và hệ thống điện, tư vấn có cần thay bình không.</p><a href="tel:+84932654809" class="service-link">Gọi ngay →</a><a href="kich-binh-xe.html" class="service-link-secondary">Xem chi tiết →</a></div>
-      <div class="service-card"><div class="service-icon">👆</div><div class="service-name">Khóa Vân Tay – Điện Tử</div><p class="service-desc">Tư vấn, cung cấp và lắp đặt khóa vân tay, khóa điện tử thông minh chính hãng cho cửa nhà, căn hộ, văn phòng. Bảo hành thiết bị, hỗ trợ cài đặt vân tay và mã số theo yêu cầu.</p><a href="tel:+84932654809" class="service-link">Gọi ngay →</a><a href="sua-khoa-dien-tu.html" class="service-link-secondary">Xem chi tiết →</a></div>
-      <div class="service-card"><div class="service-icon">🏗</div><div class="service-name">Lắp Đặt & Thi Công Khóa</div><p class="service-desc">Thi công lắp đặt hệ thống khóa cho chung cư, văn phòng, nhà hàng, khách sạn, kho xưởng. Xuất hóa đơn VAT, bảo hành công trình. Tư vấn miễn phí trước khi thi công.</p><a href="tel:+84932654809" class="service-link">Gọi ngay →</a><a href="lam-chia-khoa-cong.html" class="service-link-secondary">Xem chi tiết →</a></div>
+      <div class="service-card"><div class="service-icon">🏍</div><div class="service-name">Mở Khóa Xe Máy</div><p class="service-desc">Quên chìa, gãy chìa, hỏng ổ khóa xe máy giữa đường? Thợ đến tận nơi trong 15–25 phút, mở khóa Honda, Yamaha, SYM, Piaggio… không trầy xước, không làm hỏng cổ xe. Giá báo trước khi làm.</p><a href="tel:+84932654809" class="service-link" onclick="return gtag_report_conversion('tel:+84932654809');">Gọi ngay →</a><a href="mo-khoa-xe-may.html" class="service-link-secondary">Xem chi tiết →</a></div>
+      <div class="service-card"><div class="service-icon">🔑</div><div class="service-name">Làm Chìa Xe Máy</div><p class="service-desc">Làm chìa dự phòng hoặc làm mới hoàn toàn ngay tại chỗ cho tất cả dòng xe máy phổ biến tại Việt Nam. Chìa cắt chính xác, vào ổ êm, không cần dắt xe đi đâu.</p><a href="tel:+84932654809" class="service-link" onclick="return gtag_report_conversion('tel:+84932654809');">Gọi ngay →</a><a href="lam-chia-xe-may.html" class="service-link-secondary">Xem chi tiết →</a></div>
+      <div class="service-card"><div class="service-icon">🛵</div><div class="service-name">Mở Cốp Yên Xe</div><p class="service-desc">Cốp yên Honda SH, Air Blade, Vision, Yamaha NVX... bị kẹt hoặc mất chìa — xử lý nhanh tại chỗ, không để lại dấu vết, không hỏng lẫy hay nệm yên. Phục vụ 24/7.</p><a href="tel:+84932654809" class="service-link" onclick="return gtag_report_conversion('tel:+84932654809');">Gọi ngay →</a><a href="mo-cop-xe.html" class="service-link-secondary">Xem chi tiết →</a></div>
+      <div class="service-card"><div class="service-icon">🚪</div><div class="service-name">Sửa Khóa Cửa</div><p class="service-desc">Sửa, thay mới ổ khóa cửa nhà, cửa phòng, cửa sắt bị hỏng, kẹt lưỡi gà, tuột chốt. Tư vấn chọn khóa chất lượng phù hợp ngân sách, lắp đặt đúng kỹ thuật ngay tại nhà.</p><a href="tel:+84932654809" class="service-link" onclick="return gtag_report_conversion('tel:+84932654809');">Gọi ngay →</a><a href="mo-khoa-cua-cuon.html" class="service-link-secondary">Xem chi tiết →</a></div>
+      <div class="service-card"><div class="service-icon">📡</div><div class="service-name">Smartkey Xe Máy</div><p class="service-desc">Lập trình, sao chép, sửa chữa và làm thêm smartkey dự phòng cho Honda, Yamaha, SYM. Dùng thiết bị Xhorse VVDI chuyên nghiệp, lập trình chuẩn xác, không lỗi tín hiệu.</p><a href="tel:+84932654809" class="service-link" onclick="return gtag_report_conversion('tel:+84932654809');">Gọi ngay →</a><a href="lam-chia-smartkey.html" class="service-link-secondary">Xem chi tiết →</a></div>
+      <div class="service-card"><div class="service-icon">🎛</div><div class="service-name">Remote Cửa Cuốn</div><p class="service-desc">Sửa, lập trình lại và làm thêm remote cửa cuốn garage, nhà xưởng, văn phòng. Hỗ trợ tất cả tần số 315MHz, 433MHz. Có remote dự phòng ngay trong ngày.</p><a href="tel:+84932654809" class="service-link" onclick="return gtag_report_conversion('tel:+84932654809');">Gọi ngay →</a><a href="sua-remote-cua-cuon.html" class="service-link-secondary">Xem chi tiết →</a></div>
+      <div class="service-card"><div class="service-icon">🗄</div><div class="service-name">Mở Két Sắt</div><p class="service-desc">Quên mật khẩu két sắt điện tử hoặc hỏng cơ chế? Thợ xử lý bằng kỹ thuật chuyên dụng, mở được mà két vẫn hoạt động bình thường, không phá két, không hỏng khoá trong.</p><a href="tel:+84932654809" class="service-link" onclick="return gtag_report_conversion('tel:+84932654809');">Gọi ngay →</a><a href="mo-ket-sat.html" class="service-link-secondary">Xem chi tiết →</a></div>
+      <div class="service-card"><div class="service-icon">🔧</div><div class="service-name">Sửa Khóa Tận Nơi</div><p class="service-desc">Bất kỳ loại khóa nào hỏng — thợ đến tận nhà, văn phòng, chung cư, kho xưởng để kiểm tra và sửa ngay tại chỗ. Không mất thời gian di chuyển, không lo gián đoạn công việc.</p><a href="tel:+84932654809" class="service-link" onclick="return gtag_report_conversion('tel:+84932654809');">Gọi ngay →</a><a href="tho-sua-khoa-uy-tin.html" class="service-link-secondary">Xem chi tiết →</a></div>
+      <div class="service-card"><div class="service-icon">📱</div><div class="service-name">Làm Mới Remote Xe</div><p class="service-desc">Remote xe máy mất tín hiệu, vỏ vỡ, pin chết? Thay vỏ mới, lập trình lại chip, test hoạt động trước khi giao. Giá thấp hơn 60–70% so với mua mới tại đại lý.</p><a href="tel:+84932654809" class="service-link" onclick="return gtag_report_conversion('tel:+84932654809');">Gọi ngay →</a><a href="lam-moi-remote-xe.html" class="service-link-secondary">Xem chi tiết →</a></div>
+      <div class="service-card"><div class="service-icon">🚗</div><div class="service-name">Mở Khóa Cửa Ô Tô</div><p class="service-desc">Khóa nhầm chìa trong xe Toyota, Honda, Hyundai, Mazda…? Thợ dùng kỹ thuật Air Wedge và Long Reach Tool chuyên nghiệp, mở cửa trong 5–10 phút, tuyệt đối không trầy sơn.</p><a href="tel:+84932654809" class="service-link" onclick="return gtag_report_conversion('tel:+84932654809');">Gọi ngay →</a><a href="mo-khoa-o-to.html" class="service-link-secondary">Xem chi tiết →</a></div>
+      <div class="service-card"><div class="service-icon">💳</div><div class="service-name">Chép Thẻ Từ</div><p class="service-desc">Sao chép, làm thêm thẻ từ chung cư, văn phòng, nhà xưởng, bãi xe. Hỗ trợ thẻ RFID 125kHz (EM4100, T5577) và 13.56MHz (Mifare, NFC). Copy xong test ngay tại chỗ.</p><a href="tel:+84932654809" class="service-link" onclick="return gtag_report_conversion('tel:+84932654809');">Gọi ngay →</a><a href="chep-the-tu.html" class="service-link-secondary">Xem chi tiết →</a></div>
+      <div class="service-card"><div class="service-icon">🔩</div><div class="service-name">Sửa Khóa Tủ</div><p class="service-desc">Tủ văn phòng, tủ hồ sơ, tủ quần áo bị hỏng khóa hoặc gãy chìa trong ổ? Thợ sửa hoặc thay ổ mới ngay tại nhà, làm thêm chìa dự phòng tránh mất lần nữa.</p><a href="tel:+84932654809" class="service-link" onclick="return gtag_report_conversion('tel:+84932654809');">Gọi ngay →</a><a href="sua-khoa-tu.html" class="service-link-secondary">Xem chi tiết →</a></div>
+      <div class="service-card"><div class="service-icon">🧳</div><div class="service-name">Sửa Khóa Vali</div><p class="service-desc">Vali du lịch bị kẹt khóa kéo, quên mã số khóa chữ số, hoặc hỏng cơ chế? Mở và sửa tại chỗ, nhanh gọn trước chuyến đi. Hỗ trợ khóa TSA, khóa số, khóa kéo các loại.</p><a href="tel:+84932654809" class="service-link" onclick="return gtag_report_conversion('tel:+84932654809');">Gọi ngay →</a><a href="sua-khoa-vali.html" class="service-link-secondary">Xem chi tiết →</a></div>
+      <div class="service-card"><div class="service-icon">🔋</div><div class="service-name">Kích Bình Xe</div><p class="service-desc">Xe máy hoặc ô tô hết điện bình giữa đường, trong bãi đỗ, sân chung cư? Thợ đến kích bình tại chỗ trong 15–25 phút, kiểm tra bình và hệ thống điện, tư vấn có cần thay bình không.</p><a href="tel:+84932654809" class="service-link" onclick="return gtag_report_conversion('tel:+84932654809');">Gọi ngay →</a><a href="kich-binh-xe.html" class="service-link-secondary">Xem chi tiết →</a></div>
+      <div class="service-card"><div class="service-icon">👆</div><div class="service-name">Khóa Vân Tay – Điện Tử</div><p class="service-desc">Tư vấn, cung cấp và lắp đặt khóa vân tay, khóa điện tử thông minh chính hãng cho cửa nhà, căn hộ, văn phòng. Bảo hành thiết bị, hỗ trợ cài đặt vân tay và mã số theo yêu cầu.</p><a href="tel:+84932654809" class="service-link" onclick="return gtag_report_conversion('tel:+84932654809');">Gọi ngay →</a><a href="sua-khoa-dien-tu.html" class="service-link-secondary">Xem chi tiết →</a></div>
+      <div class="service-card"><div class="service-icon">🏗</div><div class="service-name">Lắp Đặt & Thi Công Khóa</div><p class="service-desc">Thi công lắp đặt hệ thống khóa cho chung cư, văn phòng, nhà hàng, khách sạn, kho xưởng. Xuất hóa đơn VAT, bảo hành công trình. Tư vấn miễn phí trước khi thi công.</p><a href="tel:+84932654809" class="service-link" onclick="return gtag_report_conversion('tel:+84932654809');">Gọi ngay →</a><a href="lam-chia-khoa-cong.html" class="service-link-secondary">Xem chi tiết →</a></div>
     </div>
   </div>
 </section>
@@ -780,7 +797,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           <div class="about-feature"><div class="about-feature-icon">🔒</div><div class="about-feature-text"><strong>Xử lý tận gốc, không sửa qua loa</strong><span>16 năm tay nghề — biết đúng nguyên nhân, xử lý đúng cách, không tái phát</span></div></div>
           <div class="about-feature"><div class="about-feature-icon">🌙</div><div class="about-feature-text"><strong>Sẵn sàng 24/7 – kể cả 30 Tết lúc nửa đêm</strong><span>Không phải tất cả đều hỏng vào giờ hành chính – nên chúng tôi không nghỉ</span></div></div>
         </div>
-        <a href="tel:+84932654809" class="btn-primary" style="margin-top:8px;">📞 Gọi Ngay: 0932 654 809</a>
+        <a href="tel:+84932654809" class="btn-primary" style="margin-top:8px;" onclick="return gtag_report_conversion('tel:+84932654809');">📞 Gọi Ngay: 0932 654 809</a>
       </div>
     </div>
   </div>
@@ -840,24 +857,24 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <div class="area-group">
         <div class="area-group-title">🏙 Quận Trung Tâm</div>
         <div class="area-tags">
-          <a href="tel:+84932654809" class="area-tag">Quận 1</a><a href="tel:+84932654809" class="area-tag">Quận 3</a><a href="tel:+84932654809" class="area-tag">Quận 4</a><a href="tel:+84932654809" class="area-tag">Quận 5</a><a href="tel:+84932654809" class="area-tag">Quận 6</a><a href="tel:+84932654809" class="area-tag">Quận 7</a><a href="tel:+84932654809" class="area-tag">Quận 8</a><a href="tel:+84932654809" class="area-tag">Quận 10</a><a href="tel:+84932654809" class="area-tag">Quận 11</a><a href="tel:+84932654809" class="area-tag">Quận 12</a>
+          <a href="mo-khoa-quan-1.html" class="area-tag">Quận 1</a><a href="mo-khoa-quan-3.html" class="area-tag">Quận 3</a><a href="tel:+84932654809" class="area-tag" onclick="return gtag_report_conversion('tel:+84932654809');">Quận 4</a><a href="tel:+84932654809" class="area-tag" onclick="return gtag_report_conversion('tel:+84932654809');">Quận 5</a><a href="tel:+84932654809" class="area-tag" onclick="return gtag_report_conversion('tel:+84932654809');">Quận 6</a><a href="mo-khoa-quan-7.html" class="area-tag">Quận 7</a><a href="tel:+84932654809" class="area-tag" onclick="return gtag_report_conversion('tel:+84932654809');">Quận 8</a><a href="mo-khoa-quan-10.html" class="area-tag">Quận 10</a><a href="tel:+84932654809" class="area-tag" onclick="return gtag_report_conversion('tel:+84932654809');">Quận 11</a><a href="mo-khoa-quan-12.html" class="area-tag">Quận 12</a>
         </div>
       </div>
       <div class="area-group">
         <div class="area-group-title">🏘 Quận / Thành Phố</div>
         <div class="area-tags">
-          <a href="tel:+84932654809" class="area-tag">Bình Thạnh</a><a href="tel:+84932654809" class="area-tag">Gò Vấp</a><a href="tel:+84932654809" class="area-tag">Phú Nhuận</a><a href="tel:+84932654809" class="area-tag">Tân Bình</a><a href="tel:+84932654809" class="area-tag">Tân Phú</a><a href="tel:+84932654809" class="area-tag">Bình Tân</a><a href="tel:+84932654809" class="area-tag">TP Thủ Đức</a>
+          <a href="mo-khoa-binh-thanh.html" class="area-tag">Bình Thạnh</a><a href="mo-khoa-go-vap.html" class="area-tag">Gò Vấp</a><a href="mo-khoa-phu-nhuan.html" class="area-tag">Phú Nhuận</a><a href="mo-khoa-tan-binh.html" class="area-tag">Tân Bình</a><a href="mo-khoa-tan-phu.html" class="area-tag">Tân Phú</a><a href="mo-khoa-binh-tan.html" class="area-tag">Bình Tân</a><a href="mo-khoa-tp-thu-duc.html" class="area-tag">TP Thủ Đức</a>
         </div>
       </div>
       <div class="area-group">
         <div class="area-group-title">🌿 Huyện Ngoại Thành</div>
         <div class="area-tags">
-          <a href="tel:+84932654809" class="area-tag">Bình Chánh</a><a href="tel:+84932654809" class="area-tag">Nhà Bè</a><a href="tel:+84932654809" class="area-tag">Hóc Môn</a><a href="tel:+84932654809" class="area-tag">Củ Chi</a><a href="tel:+84932654809" class="area-tag">Cần Giờ</a>
+          <a href="mo-khoa-binh-chanh.html" class="area-tag">Bình Chánh</a><a href="mo-khoa-nha-be.html" class="area-tag">Nhà Bè</a><a href="mo-khoa-hoc-mon.html" class="area-tag">Hóc Môn</a><a href="tel:+84932654809" class="area-tag" onclick="return gtag_report_conversion('tel:+84932654809');">Củ Chi</a><a href="tel:+84932654809" class="area-tag" onclick="return gtag_report_conversion('tel:+84932654809');">Cần Giờ</a>
         </div>
       </div>
     </div>
     <div style="text-align:center;margin-top:18px;padding:14px 20px;background:var(--gold-bg);border-radius:var(--radius);border:1px solid rgba(232,167,33,.3);">
-      <p style="font-size:13px;color:#7A5500;">📞 Không thấy khu vực của bạn? <a href="tel:+84932654809" style="color:var(--gold-deep);font-weight:700;">Gọi 0932 654 809</a> để xác nhận!</p>
+      <p style="font-size:13px;color:#7A5500;">📞 Không thấy khu vực của bạn? <a href="tel:+84932654809" style="color:var(--gold-deep);font-weight:700;" onclick="return gtag_report_conversion('tel:+84932654809');">Gọi 0932 654 809</a> để xác nhận!</p>
     </div>
   </div>
 </section>
@@ -886,7 +903,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <div class="tracuu-placeholder" id="ph-xm">
         <div class="big-icon">📡</div>
         <p>Chọn hãng xe và dòng xe để xem thông tin remote / smartkey</p>
-        <p style="color:var(--gold-deep);font-weight:600;font-size:13px;margin-top:6px;">Hoặc gọi <a href="tel:+84932654809" style="color:var(--gold-deep)">0932 654 809</a> để được tư vấn trực tiếp</p>
+        <p style="color:var(--gold-deep);font-weight:600;font-size:13px;margin-top:6px;">Hoặc gọi <a href="tel:+84932654809" style="color:var(--gold-deep)" onclick="return gtag_report_conversion('tel:+84932654809');">0932 654 809</a> để được tư vấn trực tiếp</p>
       </div>
     </div>
 
@@ -901,11 +918,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <div class="tracuu-placeholder" id="ph-ot">
         <div class="big-icon">🚗</div>
         <p>Chọn hãng xe để xem thông tin cây mở khóa & chìa ô tô</p>
-        <p style="color:var(--gold-deep);font-weight:600;font-size:13px;margin-top:6px;">Cần hỗ trợ gấp? Gọi <a href="tel:+84932654809" style="color:var(--gold-deep)">0932 654 809</a></p>
+        <p style="color:var(--gold-deep);font-weight:600;font-size:13px;margin-top:6px;">Cần hỗ trợ gấp? Gọi <a href="tel:+84932654809" style="color:var(--gold-deep)" onclick="return gtag_report_conversion('tel:+84932654809');">0932 654 809</a></p>
       </div>
     </div>
     <div style="margin-top:16px;padding:14px 18px;background:var(--white);border-radius:10px;border:1px dashed rgba(232,167,33,.4);text-align:center;">
-      <p style="font-size:13px;color:var(--text-light);">⚙️ <strong>Dữ liệu đang được cập nhật thêm.</strong> Không tìm thấy dòng xe? Gọi <a href="tel:+84932654809" style="color:var(--gold-deep);font-weight:700;">0932 654 809</a> để hỗ trợ ngay.</p>
+      <p style="font-size:13px;color:var(--text-light);">⚙️ <strong>Dữ liệu đang được cập nhật thêm.</strong> Không tìm thấy dòng xe? Gọi <a href="tel:+84932654809" style="color:var(--gold-deep);font-weight:700;" onclick="return gtag_report_conversion('tel:+84932654809');">0932 654 809</a> để hỗ trợ ngay.</p>
     </div>
   </div>
 </section>
@@ -944,7 +961,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <div class="bar-row"><span class="bar-label">2 ★</span><div class="bar-track"><div class="bar-fill" style="width:1%"></div></div><span class="bar-count">3</span></div>
         <div class="bar-row"><span class="bar-label">1 ★</span><div class="bar-track"><div class="bar-fill" style="width:0%"></div></div><span class="bar-count">0</span></div>
       </div>
-      <a href="tel:+84932654809" class="btn-primary" style="flex-shrink:0;">📞 Gọi Ngay</a>
+      <a href="tel:+84932654809" class="btn-primary" style="flex-shrink:0;" onclick="return gtag_report_conversion('tel:+84932654809');">📞 Gọi Ngay</a>
     </div>
 
     <div class="reviews-grid">
@@ -1104,7 +1121,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <h2>Đang Kẹt Khóa? <span>Gọi Ngay</span></h2>
     <p>Một cuộc gọi — thợ xuất phát ngay. Có mặt trong 15–25 phút, 24/7 kể cả đêm khuya và ngày Tết</p>
     <div class="cta-actions">
-      <a href="tel:+84932654809" class="btn-primary" style="font-size:17px;padding:15px 32px;">📞 0932 654 809</a>
+      <a href="tel:+84932654809" class="btn-primary" style="font-size:17px;padding:15px 32px;" onclick="return gtag_report_conversion('tel:+84932654809');">📞 0932 654 809</a>
       <a href="https://zalo.me/0908679343" class="btn-white" target="_blank">💬 Nhắn Zalo Ngay</a>
     </div>
   </div>
@@ -1154,7 +1171,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
               <span style="font-size:18px;flex-shrink:0;margin-top:2px;">📞</span>
               <div>
                 <div style="font-size:12px;color:rgba(255,255,255,.5);font-weight:600;text-transform:uppercase;letter-spacing:.5px;margin-bottom:3px;">Hotline</div>
-                <a href="tel:+84932654809" style="font-size:16px;font-weight:800;color:var(--gold);text-decoration:none;font-family:var(--font-display);">0932 654 809</a>
+                <a href="tel:+84932654809" style="font-size:16px;font-weight:800;color:var(--gold);text-decoration:none;font-family:var(--font-display);" onclick="return gtag_report_conversion('tel:+84932654809');">0932 654 809</a>
               </div>
             </div>
             <div style="display:flex;gap:12px;align-items:flex-start;">
@@ -1187,7 +1204,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           🗺 Xem Trên Google Maps
         </a>
         <a href="tel:+84932654809"
-          style="display:flex;align-items:center;justify-content:center;gap:8px;padding:13px 20px;border-radius:12px;background:rgba(255,255,255,.07);color:var(--white);font-weight:700;font-size:14px;text-decoration:none;border:1px solid rgba(255,255,255,.15);transition:all .25s;">
+          style="display:flex;align-items:center;justify-content:center;gap:8px;padding:13px 20px;border-radius:12px;background:rgba(255,255,255,.07);color:var(--white);font-weight:700;font-size:14px;text-decoration:none;border:1px solid rgba(255,255,255,.15);transition:all .25s;" onclick="return gtag_report_conversion('tel:+84932654809');">
           📞 Gọi Ngay: 0932 654 809
         </a>
       </div>
@@ -1246,7 +1263,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </div>
     <div class="footer-col">
       <h4>Liên Hệ</h4>
-      <div class="footer-contact-item"><span class="icon">📞</span><div>Hotline: <a href="tel:+84932654809">0932 654 809</a></div></div>
+      <div class="footer-contact-item"><span class="icon">📞</span><div>Hotline: <a href="tel:+84932654809" onclick="return gtag_report_conversion('tel:+84932654809');">0932 654 809</a></div></div>
       <div class="footer-contact-item"><span class="icon">💬</span><div>Zalo: <a href="https://zalo.me/0908679343" target="_blank">0932 654 809</a></div></div>
       <div class="footer-contact-item"><span class="icon">📍</span><div>153/89 Điện Biên Phủ, Q.Bình Thạnh, TP.HCM</div></div>
       <div class="footer-contact-item"><span class="icon">🕒</span><div>Hoạt động <strong style="color:var(--gold);">24/7</strong> – Kể cả lễ Tết<br><span style="font-size:11px;color:rgba(255,255,255,.4);">Gọi bất kỳ lúc nào, thợ luôn sẵn sàng</span></div></div>
@@ -1277,7 +1294,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </div>
   <div class="footer-bottom">
     <p>© 2026 <span>Mở Khóa Sài Gòn</span>. Bảo lưu mọi quyền. &nbsp;|&nbsp; <a href="#chinh-sach" onclick="document.getElementById('chinh-sach').style.display='block';document.getElementById('chinh-sach').scrollIntoView({behavior:'smooth'});return false;" style="color:rgba(255,255,255,.4);text-decoration:none;font-size:12px;">Chính Sách Bảo Mật</a></p>
-    <p>Hotline: <a href="tel:+84932654809" style="color:var(--gold);text-decoration:none;font-weight:600;">0932 654 809</a></p>
+    <p>Hotline: <a href="tel:+84932654809" style="color:var(--gold);text-decoration:none;font-weight:600;" onclick="return gtag_report_conversion('tel:+84932654809');">0932 654 809</a></p>
   </div>
 
 <!-- ===== CHÍNH SÁCH & ĐIỀU KHOẢN (modal) ===== -->
@@ -1303,7 +1320,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </p>
     <h3 style="font-size:16px;font-weight:700;color:#1F1B16;margin:20px 0 10px;">📞 Liên hệ về quyền riêng tư</h3>
     <p style="color:#666;font-size:14px;line-height:1.8;">
-      Hotline: <a href="tel:+84932654809" style="color:#C2900F;font-weight:700;">0932 654 809</a> &nbsp;|&nbsp;
+      Hotline: <a href="tel:+84932654809" style="color:#C2900F;font-weight:700;" onclick="return gtag_report_conversion('tel:+84932654809');">0932 654 809</a> &nbsp;|&nbsp;
       Zalo: <a href="https://zalo.me/0908679343" style="color:#006AF5;font-weight:700;">0908 679 343</a><br>
       Địa chỉ: 153/89 Điện Biên Phủ, Quận Bình Thạnh, TP. Hồ Chí Minh
     </p>
@@ -1338,7 +1355,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </p>
     <h3 style="font-size:16px;font-weight:700;color:#1F1B16;margin:16px 0 8px;">5. Liên hệ</h3>
     <p style="color:#666;font-size:14px;line-height:1.8;">
-      Hotline: <a href="tel:+84932654809" style="color:#C2900F;font-weight:700;">0932 654 809</a> &nbsp;|&nbsp;
+      Hotline: <a href="tel:+84932654809" style="color:#C2900F;font-weight:700;" onclick="return gtag_report_conversion('tel:+84932654809');">0932 654 809</a> &nbsp;|&nbsp;
       Zalo: <a href="https://zalo.me/0908679343" style="color:#006AF5;font-weight:700;">0908 679 343</a>
     </p>
     <p style="font-size:12px;color:#aaa;margin-top:20px;">Cập nhật lần cuối: 05/2025 · Mở Khóa Sài Gòn</p>
@@ -1349,12 +1366,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- ===== FLOATING BUTTONS (Desktop) ===== -->
 <div class="floating-btns">
   <a href="https://zalo.me/0908679343" class="float-btn float-zalo" target="_blank"><span class="float-icon">💬</span><span>Nhắn Zalo</span></a>
-  <a href="tel:+84932654809" class="float-btn float-call"><span class="float-icon">📞</span><span>Gọi Ngay</span></a>
+  <a href="tel:+84932654809" class="float-btn float-call" onclick="return gtag_report_conversion('tel:+84932654809');"><span class="float-icon">📞</span><span>Gọi Ngay</span></a>
 </div>
 
 <!-- ===== STICKY MOBILE BAR ===== -->
 <div class="mobile-bar">
-  <a href="tel:+84932654809" class="mobile-bar-call"><span>📞</span> Gọi Ngay</a>
+  <a href="tel:+84932654809" class="mobile-bar-call" onclick="return gtag_report_conversion('tel:+84932654809');"><span>📞</span> Gọi Ngay</a>
   <a href="https://zalo.me/0908679343" class="mobile-bar-zalo" target="_blank"><span>💬</span> Zalo</a>
 </div>
 
@@ -1536,13 +1553,13 @@ function searchXeMay(){
       <div class="tracuu-info-item"><div class="tracuu-info-label">Loại Pin</div><div class="tracuu-info-value">${d.pin}</div></div>
       <div class="tracuu-info-item"><div class="tracuu-info-label">Chip/Transponder</div><div class="tracuu-info-value">${d.chip}</div></div>
       <div class="tracuu-info-item" style="grid-column:1/-1"><div class="tracuu-info-label">Lưu Ý Kỹ Thuật</div><div class="tracuu-info-value">${d.note}</div></div>
-      <div class="tracuu-info-item" style="grid-column:1/-1;background:var(--gold-light);text-align:center"><div class="tracuu-info-value">📞 Cần làm hoặc sửa remote? <a href="tel:+84932654809" style="color:var(--gold-deep);font-weight:700;">Gọi 0932 654 809</a></div></div>
+      <div class="tracuu-info-item" style="grid-column:1/-1;background:var(--gold-light);text-align:center"><div class="tracuu-info-value">📞 Cần làm hoặc sửa remote? <a href="tel:+84932654809" style="color:var(--gold-deep);font-weight:700;" onclick="return gtag_report_conversion('tel:+84932654809');">Gọi 0932 654 809</a></div></div>
     </div>`;
   }else{
     res.innerHTML=`<div class="tracuu-result-title">📡 ${dong} – Đang cập nhật dữ liệu</div>
     <div class="tracuu-info-grid">
       <div class="tracuu-info-item" style="grid-column:1/-1">Dữ liệu chi tiết cho dòng xe này đang được cập nhật. Vui lòng gọi để được tư vấn trực tiếp.</div>
-      <div class="tracuu-info-item" style="grid-column:1/-1;background:var(--gold-light);text-align:center"><div class="tracuu-info-value">📞 <a href="tel:+84932654809" style="color:var(--gold-deep);font-weight:700;">Gọi 0932 654 809</a> để được hỗ trợ ngay!</div></div>
+      <div class="tracuu-info-item" style="grid-column:1/-1;background:var(--gold-light);text-align:center"><div class="tracuu-info-value">📞 <a href="tel:+84932654809" style="color:var(--gold-deep);font-weight:700;" onclick="return gtag_report_conversion('tel:+84932654809');">Gọi 0932 654 809</a> để được hỗ trợ ngay!</div></div>
     </div>`;
   }
   res.classList.add('show'); ph.style.display='none';
@@ -1563,13 +1580,13 @@ function searchOTo(){
       <div class="tracuu-info-item"><div class="tracuu-info-label">Tần Số Remote</div><div class="tracuu-info-value">${d.freq}</div></div>
       <div class="tracuu-info-item"><div class="tracuu-info-label">Đời Xe</div><div class="tracuu-info-value">${d.year}</div></div>
       <div class="tracuu-info-item" style="grid-column:1/-1"><div class="tracuu-info-label">Lưu Ý Quan Trọng</div><div class="tracuu-info-value">${d.note}</div></div>
-      <div class="tracuu-info-item" style="grid-column:1/-1;background:var(--gold-light);text-align:center"><div class="tracuu-info-value">📞 Cần mở khóa ô tô tại chỗ? <a href="tel:+84932654809" style="color:var(--gold-deep);font-weight:700;">Gọi 0932 654 809</a></div></div>
+      <div class="tracuu-info-item" style="grid-column:1/-1;background:var(--gold-light);text-align:center"><div class="tracuu-info-value">📞 Cần mở khóa ô tô tại chỗ? <a href="tel:+84932654809" style="color:var(--gold-deep);font-weight:700;" onclick="return gtag_report_conversion('tel:+84932654809');">Gọi 0932 654 809</a></div></div>
     </div>`;
   }else{
     res.innerHTML=`<div class="tracuu-result-title">🚗 ${dong} – Đang cập nhật dữ liệu</div>
     <div class="tracuu-info-grid">
       <div class="tracuu-info-item" style="grid-column:1/-1">Dữ liệu cho dòng xe này đang được cập nhật.</div>
-      <div class="tracuu-info-item" style="grid-column:1/-1;background:var(--gold-light);text-align:center"><div class="tracuu-info-value">📞 <a href="tel:+84932654809" style="color:var(--gold-deep);font-weight:700;">Gọi 0932 654 809</a> để được hỗ trợ ngay!</div></div>
+      <div class="tracuu-info-item" style="grid-column:1/-1;background:var(--gold-light);text-align:center"><div class="tracuu-info-value">📞 <a href="tel:+84932654809" style="color:var(--gold-deep);font-weight:700;" onclick="return gtag_report_conversion('tel:+84932654809');">Gọi 0932 654 809</a> để được hỗ trợ ngay!</div></div>
     </div>`;
   }
   res.classList.add('show'); ph.style.display='none';
@@ -1778,9 +1795,9 @@ if('IntersectionObserver' in window){
     <!-- CTA Block -->
     <div class="lp-cta-block">
       <span style="font-size:13px;font-weight:600;color:var(--text-light);display:block;margin-bottom:6px;">📞 Gọi ngay – Thợ phản hồi trong 1 phút</span>
-      <a class="lp-phone" href="tel:+84932654809">0932 654 809</a>
+      <a class="lp-phone" href="tel:+84932654809" onclick="return gtag_report_conversion('tel:+84932654809');">0932 654 809</a>
       <p class="lp-phone-note">Hoặc nhắn Zalo: <strong>0908 679 343</strong> – Báo giá trong 1 phút</p>
-      <a href="tel:+84932654809" class="lp-btn-call">📞 GỌI NGAY – MIỄN PHÍ TƯ VẤN</a>
+      <a href="tel:+84932654809" class="lp-btn-call" onclick="return gtag_report_conversion('tel:+84932654809');">📞 GỌI NGAY – MIỄN PHÍ TƯ VẤN</a>
       <a href="https://zalo.me/0908679343" target="_blank" class="lp-btn-zalo">💬 Nhắn Zalo Ngay</a>
     </div>
 
@@ -1827,7 +1844,7 @@ if('IntersectionObserver' in window){
 
   <!-- Sticky bottom CTA -->
   <div class="lp-bottom-bar">
-    <a href="tel:+84932654809" class="lp-bar-call"><span>📞</span> Gọi: 0932 654 809</a>
+    <a href="tel:+84932654809" class="lp-bar-call" onclick="return gtag_report_conversion('tel:+84932654809');"><span>📞</span> Gọi: 0932 654 809</a>
     <a href="https://zalo.me/0908679343" target="_blank" class="lp-bar-zalo"><span>💬</span> Zalo</a>
   </div>
 </div>
@@ -1847,9 +1864,9 @@ if('IntersectionObserver' in window){
     <!-- CTA Block -->
     <div class="lp-cta-block">
       <span style="font-size:13px;font-weight:600;color:var(--text-light);display:block;margin-bottom:6px;">📞 Gọi ngay – Thợ phản hồi trong 1 phút</span>
-      <a class="lp-phone" href="tel:+84932654809">0932 654 809</a>
+      <a class="lp-phone" href="tel:+84932654809" onclick="return gtag_report_conversion('tel:+84932654809');">0932 654 809</a>
       <p class="lp-phone-note">Hoặc nhắn Zalo: <strong>0908 679 343</strong> – Báo giá trong 1 phút</p>
-      <a href="tel:+84932654809" class="lp-btn-call">📞 GỌI NGAY – MIỄN PHÍ TƯ VẤN</a>
+      <a href="tel:+84932654809" class="lp-btn-call" onclick="return gtag_report_conversion('tel:+84932654809');">📞 GỌI NGAY – MIỄN PHÍ TƯ VẤN</a>
       <a href="https://zalo.me/0908679343" target="_blank" class="lp-btn-zalo">💬 Nhắn Zalo Ngay</a>
     </div>
 
@@ -1896,7 +1913,7 @@ if('IntersectionObserver' in window){
 
   <!-- Sticky bottom CTA -->
   <div class="lp-bottom-bar">
-    <a href="tel:+84932654809" class="lp-bar-call"><span>📞</span> Gọi: 0932 654 809</a>
+    <a href="tel:+84932654809" class="lp-bar-call" onclick="return gtag_report_conversion('tel:+84932654809');"><span>📞</span> Gọi: 0932 654 809</a>
     <a href="https://zalo.me/0908679343" target="_blank" class="lp-bar-zalo"><span>💬</span> Zalo</a>
   </div>
 </div>
@@ -1916,9 +1933,9 @@ if('IntersectionObserver' in window){
     <!-- CTA Block -->
     <div class="lp-cta-block">
       <span style="font-size:13px;font-weight:600;color:var(--text-light);display:block;margin-bottom:6px;">📞 Gọi ngay – Thợ phản hồi trong 1 phút</span>
-      <a class="lp-phone" href="tel:+84932654809">0932 654 809</a>
+      <a class="lp-phone" href="tel:+84932654809" onclick="return gtag_report_conversion('tel:+84932654809');">0932 654 809</a>
       <p class="lp-phone-note">Hoặc nhắn Zalo: <strong>0908 679 343</strong> – Báo giá trong 1 phút</p>
-      <a href="tel:+84932654809" class="lp-btn-call">📞 GỌI NGAY – MIỄN PHÍ TƯ VẤN</a>
+      <a href="tel:+84932654809" class="lp-btn-call" onclick="return gtag_report_conversion('tel:+84932654809');">📞 GỌI NGAY – MIỄN PHÍ TƯ VẤN</a>
       <a href="https://zalo.me/0908679343" target="_blank" class="lp-btn-zalo">💬 Nhắn Zalo Ngay</a>
     </div>
 
@@ -1965,7 +1982,7 @@ if('IntersectionObserver' in window){
 
   <!-- Sticky bottom CTA -->
   <div class="lp-bottom-bar">
-    <a href="tel:+84932654809" class="lp-bar-call"><span>📞</span> Gọi: 0932 654 809</a>
+    <a href="tel:+84932654809" class="lp-bar-call" onclick="return gtag_report_conversion('tel:+84932654809');"><span>📞</span> Gọi: 0932 654 809</a>
     <a href="https://zalo.me/0908679343" target="_blank" class="lp-bar-zalo"><span>💬</span> Zalo</a>
   </div>
 </div>
@@ -1985,9 +2002,9 @@ if('IntersectionObserver' in window){
     <!-- CTA Block -->
     <div class="lp-cta-block">
       <span style="font-size:13px;font-weight:600;color:var(--text-light);display:block;margin-bottom:6px;">📞 Gọi ngay – Thợ phản hồi trong 1 phút</span>
-      <a class="lp-phone" href="tel:+84932654809">0932 654 809</a>
+      <a class="lp-phone" href="tel:+84932654809" onclick="return gtag_report_conversion('tel:+84932654809');">0932 654 809</a>
       <p class="lp-phone-note">Hoặc nhắn Zalo: <strong>0908 679 343</strong> – Báo giá trong 1 phút</p>
-      <a href="tel:+84932654809" class="lp-btn-call">📞 GỌI NGAY – MIỄN PHÍ TƯ VẤN</a>
+      <a href="tel:+84932654809" class="lp-btn-call" onclick="return gtag_report_conversion('tel:+84932654809');">📞 GỌI NGAY – MIỄN PHÍ TƯ VẤN</a>
       <a href="https://zalo.me/0908679343" target="_blank" class="lp-btn-zalo">💬 Nhắn Zalo Ngay</a>
     </div>
 
@@ -2034,7 +2051,7 @@ if('IntersectionObserver' in window){
 
   <!-- Sticky bottom CTA -->
   <div class="lp-bottom-bar">
-    <a href="tel:+84932654809" class="lp-bar-call"><span>📞</span> Gọi: 0932 654 809</a>
+    <a href="tel:+84932654809" class="lp-bar-call" onclick="return gtag_report_conversion('tel:+84932654809');"><span>📞</span> Gọi: 0932 654 809</a>
     <a href="https://zalo.me/0908679343" target="_blank" class="lp-bar-zalo"><span>💬</span> Zalo</a>
   </div>
 </div>
